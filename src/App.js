@@ -71,9 +71,14 @@ function App() {
         <div key={post.id} style={{ marginBottom: "1em" }}>
           <h2>{post.title}</h2>
           <p>{post.content}</p>
+          <p><strong>Autor:</strong> {post.username || "Anonim"}</p>
+          {post.image_url && (
+            <img src={post.image_url} alt="Obrazek" style={{ maxWidth: "300px", maxHeight: "200px" }} />
+          )}
           <small>{new Date(post.created_at).toLocaleString()}</small>
         </div>
       ))}
+
     </div>
   );
 }
