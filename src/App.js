@@ -37,13 +37,13 @@ function App() {
 
       <form onSubmit={handleSubmit}>
         <input
-          placeholder="Nazwa użytkownika (opcjonalna)"
+          placeholder="Nazwa użytkownika"
           value={form.username}
           onChange={(e) => setForm({ ...form, username: e.target.value })}
         />
         <br />
         <input
-          placeholder="Link do zdjęcia (opcjonalny)"
+          placeholder="Link do zdjęcia"
           value={form.image_url}
           onChange={(e) => setForm({ ...form, image_url: e.target.value })}
         />
@@ -75,6 +75,7 @@ function App() {
           {post.image_url && (
             <img src={post.image_url} alt="Obrazek" style={{ maxWidth: "300px", maxHeight: "200px" }} />
           )}
+          <br />
           <small>{new Date(post.created_at).toLocaleString()}</small>
         </div>
       ))}
