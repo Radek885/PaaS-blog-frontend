@@ -36,26 +36,26 @@ function App() {
       <h1>Blog</h1>
 
       <form onSubmit={handleSubmit}>
-        <input
+        <input className="input-wide"
           placeholder="Nazwa użytkownika"
           value={form.username}
           onChange={(e) => setForm({ ...form, username: e.target.value })}
         />
         <br />
-        <input
+        <input className="input-wide"
           placeholder="Link do zdjęcia"
           value={form.image_url}
           onChange={(e) => setForm({ ...form, image_url: e.target.value })}
         />
         <br />
-        <input
+        <input className="input-wide"
           placeholder="Tytuł"
           value={form.title}
           onChange={(e) => setForm({ ...form, title: e.target.value })}
           required
         />
         <br />
-        <textarea
+        <textarea className="input-wide"
           placeholder="Treść"
           value={form.content}
           onChange={(e) => setForm({ ...form, content: e.target.value })}
