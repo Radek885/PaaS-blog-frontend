@@ -4,7 +4,13 @@ const API_URL = "https://paas-blog.onrender.com"; // <- ZMIEŃ NA WŁAŚCIWY URL
 
 function App() {
   const [posts, setPosts] = useState([]);
-  const [form, setForm] = useState({ title: "", content: "" });
+  const [form, setForm] = useState({
+  title: "",
+  content: "",
+  username: "",
+  image_url: "",
+});
+
 
   useEffect(() => {
     fetch(`${API_URL}/posts`)
@@ -30,6 +36,18 @@ function App() {
       <h1>Blog</h1>
 
       <form onSubmit={handleSubmit}>
+        <input
+          placeholder="Nazwa użytkownika (opcjonalna)"
+          value={form.username}
+          onChange={(e) => setForm({ ...form, username: e.target.value })}
+        />
+        <br />
+        <input
+          placeholder="Link do zdjęcia (opcjonalny)"
+          value={form.image_url}
+          onChange={(e) => setForm({ ...form, image_url: e.target.value })}
+        />
+        <br />
         <input
           placeholder="Tytuł"
           value={form.title}
