@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const API_URL = "https://pass-blog.onrender.com"; // <- ZMIEŃ NA WŁAŚCIWY URL backendu
+const API_URL = "https://paas-blog.onrender.com"; // <- ZMIEŃ NA WŁAŚCIWY URL backendu
 
 function App() {
   const [posts, setPosts] = useState([]);
