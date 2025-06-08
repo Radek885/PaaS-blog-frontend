@@ -28,7 +28,7 @@ function App() {
     });
     const newPost = await res.json();
     setPosts([newPost, ...posts]);
-    setForm({ title: "", content: "" });
+    setForm({ title: "", content: "", username: "", image_url: ""});
   };
 
   return (
